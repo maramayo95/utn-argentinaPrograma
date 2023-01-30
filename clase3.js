@@ -86,3 +86,16 @@ function factorial(num) {
     }
   }
 //  esPalindromo("Hola")
+
+// Ejercicio 8 
+
+function convertirString(texto){
+
+    const mayuscula = texto.toUpperCase()
+    const minuscula = texto.toLowerCase()
+
+    console.log(mayuscula)
+    console.log(minuscula)
+}
+
+convertirString("Hola")
