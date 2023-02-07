@@ -68,7 +68,7 @@ function factorial(num) {
 }
 
 //let num = prompt("Ingrese un número (hasta 10) para calcular su factorial:");
-factorial(5);
+// factorial(5);
 
 // Ejercicio 7
 
@@ -119,7 +119,7 @@ function evaluarNotaIf(nota) {
 
 // evaluarNotaIf(15)
 
-// Ejercicio 9 
+// Ejercicio 9
 function ingresarMes(mes) {
   switch (mes) {
     case (mes = 1):
@@ -163,4 +163,64 @@ function ingresarMes(mes) {
   }
 }
 
-ingresarMes(5);
+// ingresarMes(5);
+
+// Ejercicio 10
+
+function piramide(n) {
+  if (n > 10) {
+    console.log("No puede exceder la operacion mas de 10 iteraciones");
+    return;
+  }
+
+  for (n; n <= 10; n++) {
+    for (i = 1; i <= n; i++) {
+      console.log(i);
+    }
+    console.log("\n");
+  }
+}
+
+// piramide(5)
+
+//Ejercicio 11
+
+function calcularBultos(stock, cantidadBultosCajas) {
+  const cajasCompletas = stock / cantidadBultosCajas;
+  console.log(cajasCompletas);
+
+  if (cajasCompletas % 2 == 0) {
+    console.log("La caja esta llena");
+    return;
+  }
+
+  const restantes = stock % cantidadBultosCajas;
+  console.log("La caja esta llena ");
+  console.log(`Los bultos restantes son : ${restantes}`);
+}
+
+// calcularBultos(15, 5);
+
+// Ejercicio 12 
+
+function compraAutos(codigo){
+    const total = 1500000
+  
+    if(codigo == 'fiesta'){
+        const porcentaje = (5 * total) / 100
+        const valorFinal = total - porcentaje
+        console.log(valorFinal)
+        return valorFinal
+      }
+
+    if(codigo == 'focus'){
+      const porcentaje = (10 * total) / 100
+      const valorFinal = total - porcentaje
+      console.log(valorFinal)
+      return valorFinal
+    }  
+}
+
+compraAutos('fiesta')
+
+compraAutos('focus')
