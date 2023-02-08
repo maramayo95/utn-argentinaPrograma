@@ -221,6 +221,6 @@ function compraAutos(codigo){
     }  
 }
 
-compraAutos('fiesta')
+// compraAutos('fiesta')
 
-compraAutos('focus')
+// compraAutos('focus')
