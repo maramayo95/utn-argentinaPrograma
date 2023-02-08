@@ -6,6 +6,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Noto Sans JP', sans-serif;
 }   
 
@@ -59,3 +60,10 @@ body {
     fill: rgb(1, 197, 1);
 }
 
+.social-media{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    align-items: center;
+    width:400px;
+}
