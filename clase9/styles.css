@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ }
+
+body{
+    background-color: #231840;
+    /* background-color:green; */
+    overflow-x:hidden;
+    position: relative;
+    height: 100vh;
+    
+}
+
+.waves{
+    position:absolute;
+    bottom: 0;
+    z-index:-1;
+    
+}
+
+.login {
+     font-family: 'Nunito', sans-serif;
+     font-weight: bold;
+}
+
+.boxOne {
+
+    background-image: url("./images/images/img-login.jpg");
+    height:500px;
+    width:500px;
+    background-size:cover;
+   
+}
+
+.boxTwo{
+    height:500px;
+    width:500px;
+    background-color:#FFFFFF;
+}
+
+
+.title {
+    font-family: "Danube" ;
+    color: #ffff;
+}
+
+
+
+.btn-color {
+    background-color:  #E21982;
+    color: #fafafa;
+}
+
+
+.enlace {
+    color: #E21982;
+    font-weight: bold;
+    font-family: 'Nunito';
+    font-weight: bold;
+
+}
+
+.border-propio {
+    border: 1px solid #C4C4C4; 
+}
+
+.div-entrada{
+    border: 1px solid #C4C4C4;
+    padding: 10px;
+    border-radius: 30px;
+    
+}
+
+.entrada {
+    border: none;
+}

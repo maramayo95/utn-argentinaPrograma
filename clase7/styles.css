@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px; 
+    background-color: #f5f5f5;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width:300px;
+}
+
+.box {
+    width: 300px;
+    height: 300px; 
+    background-color: white;
+    border: solid 1px black; 
+}
+
+
+.inputClass{
+    margin-top: 15px;
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.btn { 
+    margin-top: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.titulo {
+    text-align: center;
+}
