@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+
+<body>
+    <script>
+        const colores = ["azul", "amarillo", "rojo", "verde", "café", "rosa"];
+
+        // Solicitamos al usuario que ingrese un color
+        const colorUsuario = prompt("Ingrese un color:");
+
+        // Verificamos si el color ingresado se encuentra en el array
+        if (colores.includes(colorUsuario)) {
+            alert(`El color ${colorUsuario} se encuentra en el array.`);
+        } else {
+            alert(`El color ${colorUsuario} no se encuentra en el array.`);
+        }
+    </script>
+</body>
+
+</html>

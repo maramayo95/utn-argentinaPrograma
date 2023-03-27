@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        // Ejercicio A
+        console.log("Ejercicio A")
+        const nombres = ["Florencia", "Lucas", "Ezequiel", "Matias", "Bruno", "Gustavo", "Martin"];
+        const nombresCon6Letras = nombres.filter(nombre => nombre.length >= 6);
+        console.log(nombresCon6Letras); // ["Florencia", "Ezequiel", "Matias", "Gustavo", "Martin"]
+
+
+        // Ejercicio B 
+        console.log("Ejercicio B")
+
+        const nombresConM = nombres.filter(nombre => nombre.startsWith("M"));
+        console.log(nombresConM); // ["Matias"]
+
+        // Ejercicio C
+        console.log("Ejercicio C")
+        
+        const nombresOrdenados = nombres.sort();
+        console.log(nombresOrdenados); // ["Bruno", "Ezequiel", "Florencia", "Gustavo", "Lucas", "Martin", "Matias"]
+
+        // Ejercicio D 
+        console.log("Ejercicio D")
+        
+        const iniciales = nombres.map(nombre => nombre.charAt(0));
+        console.log(iniciales); // ["F", "L", "E", "M", "B", "G", "M"]
+
+        // Ejercicio E 
+        console.log("Ejercicio E")
+        
+        const nombresMayuscula = nombres.map(nombre => nombre.toUpperCase());
+        console.log(nombresMayuscula); // ["FLORENCIA", "LUCAS", "EZEQUIEL", "MATIAS", "BRUNO", "GUSTAVO", "MARTIN"]
+
+        // Ejercicio F
+        console.log("Ejercicio F")
+        
+        const comienzaConJ = nombres.some(nombre => nombre.startsWith("J"));
+        console.log(comienzaConJ); // false
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <script>
+        function palabrasVocales(arreglo) {
+            const vocales = ["a", "e", "i", "o", "u"];
+            const palabras = arreglo.filter(palabra => vocales.includes(palabra[0].toLowerCase()));
+            return palabras;
+        }
+
+        const palabras = ["Hola", "amigo", "estrella", "Iglesia", "Universidad", "Otoño", "Argentina"];
+        const vocales = palabrasVocales(palabras);
+        console.log(vocales); // ["Hola", "amigo", "estrella", "Universidad", "Otoño"]
+
+    </script>
+</body>
+
+</html>

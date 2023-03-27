@@ -1,0 +1,36 @@
+:root {
+    --color-rosa :  #E21982;
+    --azul-oscuro : #22193F;
+    --gris : #e8e8e8;
+    --titulo-banner-principal: 40px;
+    --bajada-banner-principal : 22px;
+    --titulos-secundarios : 28px;
+    --pre-titulos: 12px;
+    --texto-general: 16px;
+    --titulo-sumate: 23px;
+    --botones: 16px;
+    --footer: 14px;
+    --copyright: 12px;
+    --pill: 30px;
+
+}
+.navbarBg {
+     background-color: white;
+    }
+
+.hero {
+    background-image: url('./img/images/banner-principal.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    color: var(--gris);   
+}
+
+.hero a {
+    color: var(--gris);
+    background-color: var(--color-rosa);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: var(--pill);
+
+}

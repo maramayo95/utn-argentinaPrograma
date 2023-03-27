@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 </title>
+</head>
+
+<body>
+
+    <script>
+        // Generamos un array de 10 números aleatorios entre 1 y 100
+        let numeros = [];
+        for (let i = 0; i < 10; i++) {
+            numeros.push(Math.floor(Math.random() * 100) + 1);
+        }
+
+        // Ordenamos el array de menor a mayor
+        numeros.sort(function (a, b) {
+            return a - b;
+        });
+
+        // Creamos la lista desordenada en HTML
+        let lista = document.createElement('ul');
+        for (let i = 0; i < numeros.length; i++) {
+            let item = document.createElement('li');
+            item.appendChild(document.createTextNode(numeros[i]));
+            lista.appendChild(item);
+        }
+
+        // Añadimos la lista desordenada al cuerpo de la página
+        document.body.appendChild(lista);
+
+    </script>
+</body>
+
+</html>
