@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Texto con strong</title>
+	<style>
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<p>Esta es una frase con algunas palabras en <strong>negrita</strong>.</p>
+	<p>Otra frase con más palabras en <strong>negrita</strong>.</p>
+	<p>Una última frase con palabras en <strong>negrita</strong>.</p>
+
+	<script>
+		let strongWords = document.getElementsByTagName("strong");
+		for (let i = 0; i < strongWords.length; i++) {
+			strongWords[i].addEventListener("click", function() {
+				this.classList.add("hide");
+			});
+		}
+	</script>
+</body>
+</html>

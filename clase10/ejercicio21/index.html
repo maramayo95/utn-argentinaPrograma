@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mostrar/Ocultar div lentamente con jQuery</title>
+	<style>
+		#myDiv {
+			width: 400px;
+			height: 300px;
+			background-color: #f2f2f2;
+			padding: 20px;
+			overflow: hidden;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="myDiv">
+		<p>Este es el texto que se muestra inicialmente.</p>
+		<p>Este es otro párrafo de texto.</p>
+		<p>Este es un tercer párrafo de texto.</p>
+	</div>
+
+	<div id="newDiv" class="hidden">
+		<p>Este es el texto que se muestra después de ocultar el div anterior.</p>
+		<p>Este es otro párrafo de texto.</p>
+		<p>Este es un tercer párrafo de texto.</p>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#myDiv').click(function() {
+				$(this).fadeOut('slow', function() {
+					$('#newDiv').fadeIn('slow');
+				});
+			});
+		});
+	</script>
+</body>
+</html>

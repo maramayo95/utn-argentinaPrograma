@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabla con cambio de color al pasar el mouse con jQuery</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 50%;
+			margin: auto;
+		}
+
+		td {
+			padding: 10px;
+			border: 1px solid black;
+			background-color: white;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		td.highlight {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('td').hover(function() {
+				$(this).addClass('highlight');
+			}, function() {
+				$(this).removeClass('highlight');
+			});
+		});
+	</script>
+</body>
+</html>

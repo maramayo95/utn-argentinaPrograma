@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de enlace que no salga de la página</title>
+</head>
+<body>
+	<a href="https://www.ejemplodireccion.com" id="myLink">Enlace</a>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#myLink').click(function(e) {
+				e.preventDefault();
+				let href = $(this).attr('href');
+				console.log('Se intentó acceder a la página ' + href);
+			});
+		});
+	</script>
+</body>
+</html>

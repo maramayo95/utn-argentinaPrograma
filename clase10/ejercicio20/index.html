@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redimensionar div al hacer doble clic con jQuery</title>
+	<style>
+		#myDiv {
+			width: 800px;
+			height: 70px;
+			background-color: gray;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 24px;
+			color: white;
+		}
+
+		.small {
+			width: 250px;
+			height: 250px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myDiv">Haz doble clic para redimensionar</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#myDiv').dblclick(function() {
+				if ($(this).hasClass('small')) {
+					$(this).removeClass('small');
+				} else {
+					$(this).addClass('small');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

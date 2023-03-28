@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mostrar el valor de un option seleccionado con jQuery</title>
+</head>
+<body>
+	<select id="mySelect">
+		<option value="1">Opción 1</option>
+		<option value="2">Opción 2</option>
+		<option value="3">Opción 3</option>
+		<option value="4">Opción 4</option>
+	</select>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#mySelect').change(function() {
+				let selectedValue = $(this).val();
+				console.log('El usuario seleccionó la opción ' + selectedValue);
+			});
+		});
+	</script>
+</body>
+</html>
