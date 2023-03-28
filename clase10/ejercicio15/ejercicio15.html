@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tablas</title>
+	<script type="text/javascript">
+		function limpiarTabla() {
+			var tabla1 = document.getElementById("tabla1");
+			var celdas = tabla1.getElementsByTagName("td");
+			for (var i = 0; i < celdas.length; i++) {
+				celdas[i].innerHTML = "-";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Tablas</h1>
+	<table id="tabla1" border="1">
+		<tr>
+			<td>Texto 1</td>
+			<td>Texto 2</td>
+			<td>Texto 3</td>
+		</tr>
+		<tr>
+			<td>Texto 4</td>
+			<td>Texto 5</td>
+			<td>Texto 6</td>
+		</tr>
+		<tr>
+			<td>Texto 7</td>
+			<td>Texto 8</td>
+			<td>Texto 9</td>
+		</tr>
+	</table>
+	<br>
+	<table id="tabla2" border="1">
+		<tr>
+			<td>Texto A</td>
+			<td>Texto B</td>
+			<td>Texto C</td>
+		</tr>
+		<tr>
+			<td>Texto D</td>
+			<td>Texto E</td>
+			<td>Texto F</td>
+		</tr>
+		<tr>
+			<td>Texto G</td>
+			<td>Texto H</td>
+			<td>Texto I</td>
+		</tr>
+	</table>
+	<br>
+	<button onclick="limpiarTabla()">Limpiar Tabla 1</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <a href="">Texto del hipervínculo</a>
+
+    <button onclick="setHref(`https://www.google.com.ar`)">Enlace 1</button>
+<button onclick="setHref('https://www.facebook.com')">Enlace 2</button>
+<button onclick="setHref('https://www.github.com')">Enlace 3</button>
+
+<a id="myLink" href="">Texto del hipervínculo</a>
+
+<script>
+  function setHref(href) {
+    console.log(href)
+    document.getElementById("myLink").href = href;
+    document.getElementById("myLink").innerHTML = `Ir a ${href}`;
+}
+
+</script>
+
+</body>
+</html>
