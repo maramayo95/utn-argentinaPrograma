@@ -1,0 +1,12 @@
+%flex-config {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    @extend %flex-config;
+    background-color: blue;
+    padding: 20px 15px;   
+}

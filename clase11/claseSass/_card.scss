@@ -1,0 +1,24 @@
+%configuracion-flex {
+    display:flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta {
+    @extend %configuracion-flex;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    img {
+        width: 200px;
+        height: 200px;
+    }
+    h3{
+        font-size:20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}

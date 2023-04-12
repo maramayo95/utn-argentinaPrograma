@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="stylesheet" href="./styleApi.css">
+</head>
+<body>
+
+    <div id="post">
+
+    </div>
+  
+   <script>
+         fetch('http://localhost:8080/api/post')
+         .then(res => res.json())
+         .then(res => {
+            console.log(res)
+            const buscar = res.find(post => post.title === 'Cien años de soledad')
+            console.log(buscar)
+            
+            const postContainer = document.getElementById('post')
+            
+           res.map(post => {
+            postContainer.innerHTML += `
+            <div class="card">
+                <h3>${post.title}</h3>
+                <p>${post.author}</p>
+                <p>${post.body}</p>
+            </div>
+            `
+        
+        }) 
+     
+
+
+
+         } )
+   </script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formPost">
+        <label for="titulo">Título:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="author">Autor</label>
+        <input type="text" id="author" name="author" required>
+        <label for="cuerpo">Cuerpo:</label>
+        <textarea id="cuerpo" name="cuerpo" required></textarea>
+        <input type="submit">Crear post</input>
+    </form>
+
+
+    <script>
+        const formPost = document.getElementById('formPost')
+        
+        
+        function handleSubmit(e){
+            e.preventDefault()
+            const titulo = document.getElementById("title")
+            const author = document.getElementById('author')
+            const cuerpo = document.getElementById('cuerpo')
+            
+          
+            
+            const datos  = {
+                title : titulo.value,
+                author : author.value,
+                body: cuerpo.value
+            }
+
+     
+            fetch('http://localhost:8080/api/post', {
+                method: 'POST',
+                body: JSON.stringify(datos),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            
+            }
+
+        formPost.addEventListener('submit', handleSubmit)
+
+
+
+
+    </script>
+</body>
+</html>

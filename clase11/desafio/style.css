@@ -21,9 +21,11 @@
 .hero {
     background-image: url('./img/images/banner-principal.jpg');
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     background-repeat: no-repeat;
-    color: var(--gris);   
+    color: var(--gris);  
+    
+
 }
 
 .hero a {
@@ -33,4 +35,21 @@
     padding: 10px 15px;
     border-radius: var(--pill);
 
+}
+
+.hero .titulo {
+   font-size: var(--titulo-banner-principal); 
+}
+
+.hero .subtitulo {
+    font-size: var( --bajada-banner-principal);
+}
+
+
+.conocenos {
+    background-color: var(--gris);
+}
+
+.conocenos-caja{
+    width:600px;
 }

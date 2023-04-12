@@ -1,0 +1,20 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.card {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 10px;
+
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    
+    <div class="animate__animated animate__bounce ">
+        <a href="www.google.com.ar">Hola</a>
+    </div>
+
+    <div class="animate__animated animate__pulse">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus culpa dignissimos ratione incidunt doloremque. Mollitia perspiciatis iste iure adipisci libero repudiandae voluptate omnis! Temporibus, consequuntur! Recusandae doloribus in molestiae odio.
+        </p>
+    </div>
+<!--     
+    <form>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="errorMsg" class="form-errors"></div>
+
+
+    <div class="mi-div"></div>
+
+    <div id="tarea">
+
+    </div>
+
+    <div class="elemento">
+
+    </div> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+    <script>
+        //const tarea = document.getElementById('tarea')
+
+        // const getData = async () => {
+        //     const request = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //     const response = await request.json()
+        //     console.log(response)
+        //     tarea.innerHTML = `
+        //     <h2>${response.title}</h2>
+        //     <p>${response.completed}</p>
+
+        //     `
+        // }
+        //getData()
+
+        // fetch('https://jsonplaceholder.typicode.com/todos/1')
+        // .then(request => request.json())
+        // .then(response => {
+        //     tarea.innerHTML = `
+        //      <h2>${response.title}</h2>
+        //    <p>${response.completed}</p>
+        // `
+        // }).catch(err => console.log(err))
+
+
+        const formulario = document.querySelector("form");
+        const errorMsg = document.getElementById('errorMsg')
+
+        formulario.addEventListener("submit", event => {
+            event.preventDefault();
+            validarFormulario();
+            fetch('', {
+
+            })
+        }
+        );
+
+
+
+        function validarFormulario() {
+            const constraints = {
+                nombre: {
+                    presence: true,
+                    length: {
+                        minimum: 3,
+                        message: "Debe tener al menos 3 caracteres"
+                    }
+                },
+                email: {
+                    presence: true,
+                    email: true
+                },
+                mensaje: {
+                    presence: true,
+                    length: {
+                        minimum: 10,
+                        message: "Debe tener al menos 10 caracteres"
+                    }
+                }
+            };
+
+            const datos = {
+                nombre: formulario.nombre.value,
+                email: formulario.email.value,
+                mensaje: formulario.mensaje.value
+            };
+
+            const errores = validate(datos, constraints);
+
+            if (errores) {
+
+                if (errores.mensaje) {
+                    const p = document.createElement('p')
+                    p.innerHTML = `${errores.mensaje}`
+                    errorMsg.appendChild(p)
+
+                }
+
+                if (errores.nombre) {
+                    const p = document.createElement('p')
+                    p.innerHTML = `${errores.nombre}`
+                    errorMsg.appendChild(p)
+
+
+                }
+
+            } else {
+                // Si no hay errores, envía el formulario
+
+                errorMsg.style.display = 'none'
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
